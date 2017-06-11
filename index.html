@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <!-- bag image -->
+            <div id="bag" :class="classObject" @click="punch(10)" @dblclick="punch(20)" @mousedown="if (health) punching = true" @mouseup="punching = false"></div>
+
+            <!-- bag health -->
+            <div id="bag-health">
+              <div :style="{width : health + '%'}"></div>
+            </div>
+
+            <!-- game controls -->
+            <div id="controls">
+              <button @click="restart">Restart</button>
+            </div>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>
